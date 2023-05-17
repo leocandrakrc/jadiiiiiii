@@ -3,25 +3,9 @@ st.set_page_config(page_title="AIR PERMUKAAN KELOMPOK 8 PLI",page_icon=":microsc
 from streamlit_option_menu import option_menu
 
 # Sidebar
-selected = option_menu(
-    menu_title=None,
-    options=["Artikel", "Calculator", "Masukan Dan Saran"],
-    icons=["book-half", "pencil-square", "send-plus"],
-    menu_icon="cast",
-    default_index=0,
-    orientation="horizontal",
-    styles={
-        "container": {"padding": "0!important", "background-color": "white"},
-        "icon": {"color": "black", "font-family": "Times New Roman", "font-size": "25px"},
-        "nav-link": {
-            "font-size": "15px",
-            "text-align": "mid",
-            "margin": "0px",
-            "--hover-color": "#69F0AE"
-        },
-        "nav-link-selected": {"background-color": "#69F0AE"}
-    }
-)
+menu = ["Artikel", "Calculator", "Masukan Dan Saran"] 
+selected = st.sidebar.selectbox("TEKNIK PENGAMBILAN SAMPEL AIR PERMUKAAN",menu)
+
 
 
 
